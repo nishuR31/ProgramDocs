@@ -1,0 +1,231 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.theme-details {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Theme preview styles */
+.theme-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.theme-preview {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-preview:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme button hover effect */
+.theme-toggle-btn:hover {
+  background: darken(var(--accent-color), 10%);
+  transform: scale(1.05);
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+}
+
+/* Transition for smooth color changes */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f1f1f1;
+  --accent-color: #1d72b8;
+  --text-color: #333333;
+  --background-color: #f9f9f9;
+}
+
+/* Light Theme */
+:root[data-theme="light"] {
+  --primary-color: #ffffff;
+  --secondary-color: #f1f1f1;
+  --accent-color: #1d72b8;
+  --text-color: #333333;
+  --background-color: #f9f9f9;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  --primary-color: #121212;
+  --secondary-color: #1f1f1f;
+  --accent-color: #bb86fc;
+  --text-color: #ffffff;
+  --background-color: #121212;
+}
+
+/* Solarized Theme */
+:root[data-theme="solarized"] {
+  --primary-color: #002b36;
+  --secondary-color: #073642;
+  --accent-color: #b58900;
+  --text-color: #839496;
+  --background-color: #fdf6e3;
+}
+
+/* Oceanic Theme */
+:root[data-theme="oceanic"] {
+  --primary-color: #2b3a42;
+  --secondary-color: #2c3e50;
+  --accent-color: #16a085;
+  --text-color: #ecf0f1;
+  --background-color: #34495e;
+}
+
+/* Warm Theme */
+:root[data-theme="warm"] {
+  --primary-color: #ff7f50;
+  --secondary-color: #ff6347;
+  --accent-color: #f4a261;
+  --text-color: #2f4f4f;
+  --background-color: #faebd7;
+}
+
+/* Forest Theme */
+:root[data-theme="forest"] {
+  --primary-color: #2e8b57;
+  --secondary-color: #3cb371;
+  --accent-color: #006400;
+  --text-color: #ffffff;
+  --background-color: #004d1a;
+}
+
+/* Pastel Theme */
+:root[data-theme="pastel"] {
+  --primary-color: #ffcbf2;
+  --secondary-color: #f3c4fb;
+  --accent-color: #ffabe1;
+  --text-color: #2f2f2f;
+  --background-color: #e0aaff;
+}
+
+/* Neon Theme */
+:root[data-theme="neon"] {
+  --primary-color: #0ff;
+  --secondary-color: #ff0;
+  --accent-color: #f0f;
+  --text-color: #000;
+  --background-color: #222;
+}
+
+/* Monochrome Theme */
+:root[data-theme="monochrome"] {
+  --primary-color: #444;
+  --secondary-color: #555;
+  --accent-color: #666;
+  --text-color: #ddd;
+  --background-color: #222;
+}
+
+/* Candy Theme */
+:root[data-theme="candy"] {
+  --primary-color: #ff6f61;
+  --secondary-color: #ff9671;
+  --accent-color: #ffc75f;
+  --text-color: #ffffff;
+  --background-color: #d65db1;
+}
+
+/* Autumn Theme */
+:root[data-theme="autumn"] {
+  --primary-color: #a0522d;
+  --secondary-color: #cd853f;
+  --accent-color: #d2691e;
+  --text-color: #fff5ee;
+  --background-color: #8b4513;
+}
+
+/* General container styling with glassmorphism */
+.theme-toggle-container {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  color: var(--text-color, #333);
+}
+
+/* Preview container */
+.theme-preview-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+/* Theme preview box */
+.theme-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-preview:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.theme-toggle-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color, #1d72b8);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--secondary-color, #f1f1f1);
+  color: var(--text-color, #333);
+}
