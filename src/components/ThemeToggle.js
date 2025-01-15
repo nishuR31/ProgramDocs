@@ -15,7 +15,7 @@ const colorPalettes = [
       name: "Dark",
       primary: "#1a1a1a",
       secondary: "#2a2a2a",
-      accent: "#e84393",
+      accent: "#5211ea",
       text: "#f5f5f5",
       background: "#121212"
     },
@@ -96,7 +96,7 @@ const colorPalettes = [
 
 const ThemeToggle = () => {
   const [currentTheme, setCurrentTheme] = useState(
-    localStorage.getItem('theme') || 'Dark'
+    localStorage.getItem('theme') || 'Light'
   );
   const [palette, setPalette] = useState(
     colorPalettes.find((p) => p.name === currentTheme)
@@ -133,7 +133,7 @@ const ThemeToggle = () => {
 
   // Reset theme to default
   const resetTheme = () => {
-    const defaultTheme = colorPalettes[0];
+    const defaultTheme = colorPalettes[1];
     setPalette(defaultTheme);
     setCurrentTheme(defaultTheme.name);
   };
