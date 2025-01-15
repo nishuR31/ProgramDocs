@@ -1,79 +1,226 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
+.navbar { 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  background-image: url("https://media.istockphoto.com/id/1470617656/vector/ai-artificial-intelligence-chipset-on-circuit-board-in-futuristic-concept-suitable-for.jpg?s=612x612&w=0&k=20&c=_wC-pphyNI2muaUHG4N9JuYXxJEMDuzx56Dvzr8ZDUk=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-clip: border-box;
+  color: var(--accent-color);
+}
+
+.navbar-logo {
+  font-size: 50px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  width: auto;
+}
+
+.navbar-search {
+  width: auto;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  backdrop-filter: contract(5px);
+  background-color: transparent;
+  border-radius: 5px;
+  transition: width 0.9s ease-in-out;
+}
+
+input::placeholder {
+  font-size: larger;
+  color: var(--accent-color);
+  font-weight: bolder;
+}
+
+input:hover {
+  box-shadow: inset 0px 0px 2px var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.navbar-search.active {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+  transition: width 0.5s ease-in-out;
+  border-radius: 4px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  color: var(--primary--);
+  transition: width 0.5s ease-in-out;
+  border-radius: 4px;
+  width: fit-content;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-result-item {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  backdrop-filter: blur(6px);
+}
+
+.search-no-match {
+  padding: 0.5rem;
+  color: red;
+}
+
+.nav-links {
+  display: flex;
+  transform-origin: center;
+  align-items: baseline;
+  background-color: transparent;
+  gap: 1rem;
+}
+
+.nav-links a,
+.theme-toggle-btn {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.theme-toggle-btn:hover {
+  backdrop-filter: blur(5px);
+  font-size: large;
+  box-shadow: inset 0px 0px 2px var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.theme-toggle-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  backdrop-filter: blur(6px);
+  border-radius: 4px;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* Media Queries for different screen sizes */
+
+/* Large screens (>= 1200px) */
+@media (min-width: 1200px) {
   .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 60px;
   }
-  
-  .search-container {
-    position: relative;
-    display: flex;
+
+  .navbar-content {
+    justify-content: space-between;
+    gap: 2rem;
   }
-  
+
   .navbar-search {
-    padding: 8px 12px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    transition: width 0.3s ease;
+    width: 250px;
+  }
+
+  .navbar-search.active {
+    width: 350px;
+  }
+}
+
+/* Medium screens (>= 768px and < 1200px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navbar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-container {
+    width: auto;
+  }
+
+  .navbar-search {
     width: 200px;
   }
-  
+
   .navbar-search.active {
     width: 300px;
   }
-  
-  .search-results {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background: white;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-    width: 100%;
-    z-index: 10;
+}
+
+/* Small screens (>= 480px and < 768px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .search-result-item {
-    padding: 8px;
-    cursor: pointer;
+
+  .navbar-search {
+    width: 180px;
   }
-  
-  .search-result-item:hover {
-    background-color: #f0f0f0;
+
+  .navbar-search.active {
+    width: 250px;
   }
-  
-  .search-no-match {
-    padding: 8px;
-    color: #999;
-  }
-  
+
   .nav-links {
-    display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+}
+
+/* Extra small screens (< 480px) */
+@media (max-width: 479px) {
+  .navbar-logo {
+    font-size: 30px;
   }
-  
-  .nav-link:hover {
-    background-color: #555;
+
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .navbar-search {
+    width: 100%;
+  }
+
+  .navbar-search.active {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

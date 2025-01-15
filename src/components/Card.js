@@ -1,8 +1,10 @@
 import React from 'react';
-import './Card.css';
+import './styles/Card.css';
 
 // Card component
 const Card = ({ image, title, content, link, tele }) => {
+  const isValidTele = tele && tele.startsWith('@');
+
   return (
     <div className="card">
       <img src={image} alt={title} className="card-image" />
@@ -11,12 +13,24 @@ const Card = ({ image, title, content, link, tele }) => {
         <p>{content}</p>
         <div className="card-links">
           {link && (
-            <a href={link} target="_blank" rel="noopener noreferrer" className="card-link">
+            <a 
+              href={link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="card-link" 
+              aria-label={`Learn more about ${title}`}
+            >
               Learn More
             </a>
           )}
-          {tele && (
-            <a href={`https://t.me/${tele}`} target="_blank" rel="noopener noreferrer" className="card-tele">
+          {isValidTele && (
+            <a 
+              href={`https://t.me/${tele}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="card-tele"
+              aria-label={`Chat on Telegram with ${tele}`}
+            >
               Telegram
             </a>
           )}

@@ -7,60 +7,49 @@ body {
 }
 
 .theme-toggle-container {
-  margin: 20px auto;
-  padding: 20px;
+  z-index: 1000;
   max-width: 600px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  background:transparent;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: var(--text-color);
+  box-shadow: 0 4px 6px var(--accent-color);
+  color: var(--accent-color);
   text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 
-h2 {
-  margin-bottom: 15px;
-}
 
 .theme-details {
   font-size: 14px;
   line-height: 1.6;
+  border: none;
   margin-bottom: 20px;
 }
 
-/* Theme preview styles */
-.theme-preview-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
 
 .theme-preview {
   display: inline-block;
   width: 80px;
   height: 80px;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.theme-preview:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-/* Theme button hover effect */
-.theme-toggle-btn:hover {
-  background: darken(var(--accent-color), 10%);
-  transform: scale(1.05);
-}
+
 
 /* Glass morphism effect */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  background: transparent;
+  border:none;
+  box-shadow: inset 0 0 12px var(--accent-color);
   backdrop-filter: blur(8px);
   border-radius: 16px;
 }
@@ -68,54 +57,54 @@ h2 {
 /* Transition for smooth color changes */
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #f1f1f1;
-  --accent-color: #1d72b8;
-  --text-color: #333333;
-  --background-color: #f9f9f9;
+  --secondary-color: #3b3b3b;
+  --accent-color: #00c3ff;
+  --text-color: #000000;
+  --background-color: #c5c770;
 }
 
 /* Light Theme */
 :root[data-theme="light"] {
   --primary-color: #ffffff;
-  --secondary-color: #f1f1f1;
-  --accent-color: #1d72b8;
+  --secondary-color: #606060;
+  --accent-color: #1e90ff;
   --text-color: #333333;
-  --background-color: #f9f9f9;
+  --background-color: #f2f2f2;
 }
 
 /* Dark Theme */
 :root[data-theme="dark"] {
-  --primary-color: #121212;
-  --secondary-color: #1f1f1f;
-  --accent-color: #bb86fc;
-  --text-color: #ffffff;
+  --primary-color: #1a1a1a;
+  --secondary-color: #2a2a2a;
+  --accent-color: #bd19d3;
+  --text-color: #f5f5f5;
   --background-color: #121212;
 }
 
 /* Solarized Theme */
 :root[data-theme="solarized"] {
-  --primary-color: #002b36;
-  --secondary-color: #073642;
-  --accent-color: #b58900;
+  --primary-color: #073642;
+  --secondary-color: #586e75;
+  --accent-color: #cea11a;
   --text-color: #839496;
   --background-color: #fdf6e3;
 }
 
 /* Oceanic Theme */
 :root[data-theme="oceanic"] {
-  --primary-color: #2b3a42;
+  --primary-color: #34495e;
   --secondary-color: #2c3e50;
-  --accent-color: #16a085;
+  --accent-color: #1abc9c;
   --text-color: #ecf0f1;
-  --background-color: #34495e;
+  --background-color: #22303c;
 }
 
 /* Warm Theme */
 :root[data-theme="warm"] {
-  --primary-color: #ff7f50;
-  --secondary-color: #ff6347;
+  --primary-color: #ffdab9;
+  --secondary-color: #ff8c69;
   --accent-color: #f4a261;
-  --text-color: #2f4f4f;
+  --text-color: #3b2f2f;
   --background-color: #faebd7;
 }
 
@@ -123,18 +112,18 @@ h2 {
 :root[data-theme="forest"] {
   --primary-color: #2e8b57;
   --secondary-color: #3cb371;
-  --accent-color: #006400;
-  --text-color: #ffffff;
-  --background-color: #004d1a;
+  --accent-color: #228b22;
+  --text-color: #e6ffe6;
+  --background-color: #1c4b27;
 }
 
 /* Pastel Theme */
 :root[data-theme="pastel"] {
-  --primary-color: #ffcbf2;
-  --secondary-color: #f3c4fb;
-  --accent-color: #ffabe1;
-  --text-color: #2f2f2f;
-  --background-color: #e0aaff;
+  --primary-color: #f9f5ff;
+  --secondary-color: #efc3e6;
+  --accent-color: #ffbbcc;
+  --text-color: #4a4a4a;
+  --background-color: #d5cbe5;
 }
 
 /* Neon Theme */
@@ -142,90 +131,176 @@ h2 {
   --primary-color: #0ff;
   --secondary-color: #ff0;
   --accent-color: #f0f;
-  --text-color: #000;
-  --background-color: #222;
+  --text-color: #222;
+  --background-color: #000;
 }
 
 /* Monochrome Theme */
 :root[data-theme="monochrome"] {
-  --primary-color: #444;
-  --secondary-color: #555;
-  --accent-color: #666;
-  --text-color: #ddd;
-  --background-color: #222;
+  --primary-color: #555;
+  --secondary-color: #666;
+  --accent-color: #777;
+  --text-color: #e0e0e0;
+  --background-color: #1c1c1c;
 }
 
 /* Candy Theme */
 :root[data-theme="candy"] {
-  --primary-color: #ff6f61;
-  --secondary-color: #ff9671;
-  --accent-color: #ffc75f;
-  --text-color: #ffffff;
-  --background-color: #d65db1;
+  --primary-color: #f28a8a;
+  --secondary-color: #ffb3b3;
+  --accent-color: #ffda77;
+  --text-color: #fff5f5;
+  --background-color: #ec407a;
 }
 
 /* Autumn Theme */
 :root[data-theme="autumn"] {
-  --primary-color: #a0522d;
-  --secondary-color: #cd853f;
-  --accent-color: #d2691e;
-  --text-color: #fff5ee;
+  --primary-color: #b76e31;
+  --secondary-color: #d88a55;
+  --accent-color: #e96c3a;
+  --text-color: #fffaf0;
   --background-color: #8b4513;
 }
 
-/* General container styling with glassmorphism */
-.theme-toggle-container {
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  text-align: center;
-  color: var(--text-color, #333);
-}
 
-/* Preview container */
-.theme-preview-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
+
 
 /* Theme preview box */
 .theme-preview {
   width: 100px;
-  height: 100px;
+  height: 70px;
+
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: normal;
+  border: none;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+
 .theme-preview:hover {
+  box-shadow: inset 0 4px 10px black;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-preview-container:hover .theme-preview:not(:hover) {
+  opacity: 60%;
 }
 
 /* Button styling */
 .theme-toggle-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
+
   border: none;
   border-radius: 5px;
-  background-color: var(--accent-color, #1d72b8);
-  color: #fff;
+  background-color: transparent;
   font-size: 1rem;
+  color: var(--accent-color,);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.theme-toggle-btn:hover {
-  background-color: var(--secondary-color, #f1f1f1);
-  color: var(--text-color, #333);
+
+
+.theme-toggle-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color:transparent;
+  border: none;
+  z-index: 1000;
+  width: 300px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+.theme-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: none;
+  background-color: transparent;
+  gap: 0.5rem;
+}
+
+
+
+/* Media Queries for different screen sizes */
+
+/* Large screens (>= 1200px) */
+@media (min-width: 1200px) {
+  .theme-toggle-container {
+    max-width: 800px;
+
+  }
+
+  .theme-preview {
+    width: 120px;
+    height: 90px;
+  }
+
+  .theme-preview-container {
+    justify-content: flex-start;
+  }
+}
+
+/* Medium screens (>= 768px and < 1200px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .theme-toggle-container {
+    max-width: 700px;
+
+  }
+
+  .theme-preview {
+    width: 100px;
+    height: 70px;
+  }
+
+  .theme-preview-container {
+    justify-content: flex-start;
+  }
+}
+
+/* Small screens (>= 480px and < 768px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .theme-toggle-container {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .theme-preview {
+    width: 80px;
+    height: 60px;
+  }
+
+  .theme-preview-container {
+    justify-content: center;
+  }
+}
+
+/* Extra small screens (< 480px) */
+@media (max-width: 479px) {
+  .theme-toggle-container {
+    max-width: 100%;
+  }
+
+  .theme-preview {
+    width: 70px;
+    height: 50px;
+  }
+
+  .theme-preview-container {
+    justify-content: center;
+    gap: 0.3rem;
+  }
 }
