@@ -99,7 +99,7 @@ input:hover {
   display: flex;
   transform-origin: center;
   align-items: baseline;
-  background-color: transparent;
+  background-color: var(--accent-color);
   gap: 1rem;
 }
 
@@ -131,7 +131,7 @@ input:hover {
   border: none;
   backdrop-filter: blur(6px);
   border-radius: 4px;
-  padding: 1rem;
+  /* padding: 1rem; */
   z-index: 1000;
 }
 
