@@ -49,6 +49,7 @@ Welcome to **Program Docs**, a comprehensive learning platform created using Rea
 - [Modules](#modules)
 - [Static Content](#static-content)
 - [Topics Covered](#topics-covered)
+- [Structure](#structure)
 - [Downloadable Study Materials](#downloadable-study-materials)
 - [Upcoming Features](#upcoming-features)
 - [Contributing](#contributing)
@@ -93,6 +94,55 @@ Learning Hub covers a wide range of topics, including but not limited to:
 - Database management with MySQL and MongoDB
 - Fundamentals of Artificial Intelligence
 - Tools for working with images and graphics
+
+<br>
+
+## Structure
+
+ProgramDocs/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+|   ├── manifest.json
+|   └──robots.txt
+├── src/
+│   ├── assets/                # Static assets like images
+│   │   ├── ai.jpg
+│   │   ├── express.png
+│   │   ├── giphy.gif
+│   │   ├── git.jpg
+│   │   ├── github.webp
+│   │   ├── markdown.jpg
+│   │   ├── mongo.png
+│   │   ├── mysql.jpg
+│   │   ├── node.jpg
+│   │   ├── pic-tools.jpg
+│   │   └──python.jpg
+│   ├── components/            # Reusable components
+│   │   ├── Navbar.js
+│   │   ├── ThemeToggle.js
+│   │   ├── Card.js
+│   │   ├── Footer.js
+│   │   └── styles/            # CSS files specific to components
+│   │       ├── ThemeToggle.css
+│   │       ├── Card.css
+│   │       ├── Footer.css
+│   │       └── Navbar.css
+│   ├── pages/                 # Page-level components
+│   │   ├── HomePage.js
+│   │   └── tobeadded
+│   ├── tests/                 # Test files
+│   │   ├── App.test.js        # Test for the App.js component
+│   │   └── setupTests.js      # Test setup file for Jest (if using)
+│   ├── utils/                 # Utility files or helper functions
+│   │   ├── reportWebVitals.js
+│   ├── App.js                 # Main app component
+│   ├── App.css               # Main app component
+│   ├── index.css              # Global styles
+│   └── index.js               # Main entry point
+├── .gitignore
+├── package-lock.json
+└── package.json               # Project dependencies and scripts
 
 <br>
 
