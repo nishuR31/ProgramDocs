@@ -99,6 +99,7 @@ Learning Hub covers a wide range of topics, including but not limited to:
 
 ## Structure
 
+```bash
 ProgramDocs/
 ├── public/
 │   ├── index.html
@@ -135,7 +136,7 @@ ProgramDocs/
 │   │   ├── App.test.js        # Test for the App.js component
 │   │   └── setupTests.js      # Test setup file for Jest (if using)
 │   ├── utils/                 # Utility files or helper functions
-│   │   ├── reportWebVitals.js
+│   │   └── reportWebVitals.js
 │   ├── App.js                 # Main app component
 │   ├── App.css               # Main app component
 │   ├── index.css              # Global styles
@@ -143,6 +144,7 @@ ProgramDocs/
 ├── .gitignore
 ├── package-lock.json
 └── package.json               # Project dependencies and scripts
+```
 
 <br>
 
